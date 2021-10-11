@@ -17,7 +17,6 @@
 #include <SPI.h>
 #include "TeensyTimerTool.h"
 #include "micro7seg.h"
-#include "cli.h"
 #include "main.h"
 
 TeensyTimerTool::PeriodicTimer refreshTimer;
