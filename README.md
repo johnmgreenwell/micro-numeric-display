@@ -4,7 +4,7 @@ Print data to 7-segment micro-numeric indicator chip with Teensy microcontroller
 
 ## Overview
 
-The included custom library *micro7seg.h* provides Arduino framework support for controlling [QDSP-6064](https://www.sparkfun.com/products/retired/12710) micro-numeric indicator chips.
+The included custom library [*micro7seg.h*](src/src/micro7seg.h) provides Arduino framework support for controlling [QDSP-6064](https://www.sparkfun.com/products/retired/12710) micro-numeric indicator chips.
 
 ![Example Runtime](images/micro_numeric_display_runtime.gif)
 
@@ -27,7 +27,7 @@ for (uint16_t i = 0; i < 0xFFFF; i++) {
 
 Printing of character strings extends to printing the symbol '-', and also use of '.' to illuminate built-in decimal point for each digit of the display.
 
-Initilization of the class requires an array of pointers to three user-defined functions which define IO setup, IO pin arrangement relative to each segment of each digit, and IO selection of each digit. Specific details regarding these function formats are included in *micro7seg.h*.
+Initilization of the class requires an array of pointers to three user-defined functions which define IO setup, IO pin arrangement relative to each segment of each digit, and IO selection of each digit. Specific details regarding these function formats are included in [*micro7seg.h*](src/src/micro7seg.h).
 
 ```cpp
 void (*micro7SegIOBind[3])(uint8_t) = {
@@ -39,7 +39,7 @@ void (*micro7SegIOBind[3])(uint8_t) = {
 
 This way, the class is abstracted from any custom circuitry intended for driving the chip, and is not limited to the circuit schematic used in this example.
 
-For the display to function properly, a call to the method *refresh( )* must be made often enough to prevent noticeable flickering (e.g. every 2.5ms). This is because only one digit is illuminated at any given time, and the appearance of continuity follows from [persistence of vision](https://en.wikipedia.org/wiki/Persistence_of_vision). This may be accomplished with interrupts directly, or using any preferred Timer class.
+For the display to function properly, a call to the method *refresh( )* must be made often enough to prevent noticeable flickering (e.g. every 2.5ms). This is because only one digit is illuminated at a given time, and the appearance of continuity follows from [persistence of vision](https://en.wikipedia.org/wiki/Persistence_of_vision). Automatic refresh may be accomplished with interrupts directly, or using any preferred [Timer class](https://github.com/luni64/TeensyTimerTool).
 
 ```cpp
 TeensyTimerTool::PeriodicTimer refreshTimer;
