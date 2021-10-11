@@ -10,9 +10,9 @@ The included custom library [*micro7seg.h*](src/src/micro7seg.h) provides Arduin
 
 The library is designed for flexibility with respect to intermediate stages of circuitry driving the chip. In this example project, the chip is driven using a [74HC595 8-bit Shift Register](https://www.digikey.com/en/products/detail/texas-instruments/SN74HC595N/277246) and four [2N3904 NPN transistors](https://www.digikey.com/en/products/detail/rochester-electronics-llc/2N3904/11554806).
 
-## Code
+## Usage
 
-Using the library, the micro-numeric indicator chip is accessed with the *print( )* method. The operation shown above is the result of example code:
+With this library, the micro-numeric indicator chip is accessed using the *print( )* method. The operation shown above is the result of example code:
 
 ```cpp
 display.print("dead");
