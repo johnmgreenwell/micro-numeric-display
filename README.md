@@ -39,7 +39,7 @@ void (*micro7SegIOBind[3])(uint8_t) = {
 
 This way, the class is abstracted from any custom circuitry intended for driving the chip, and is not limited to the circuit schematic used in this example.
 
-For the display to function properly, a call to the method *refresh( )* must be made often enough to prevent noticeable flickering (e.g. every 2.5ms). This is because only one digit is illuminated at a given time, and the appearance of continuity follows from [persistence of vision](https://en.wikipedia.org/wiki/Persistence_of_vision). Automatic refresh may be accomplished with interrupts directly, or using any preferred [Timer class](https://github.com/luni64/TeensyTimerTool).
+For the display to function properly, a call to the method *refresh( )* must be made often enough to prevent noticeable flickering (e.g. every 2.5ms). Automatic refresh may be accomplished with interrupts directly, or using any preferred [Timer class](https://github.com/luni64/TeensyTimerTool).
 
 ```cpp
 TeensyTimerTool::PeriodicTimer refreshTimer;
