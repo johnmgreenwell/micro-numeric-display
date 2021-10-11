@@ -8,7 +8,7 @@ The included custom library *micro7seg.h* provides Arduino framework support for
 
 ![Example Runtime](images/micro_numeric_display_runtime.gif)
 
-The library is designed for flexibility with respect to intermediate stages of circuitry driving the chip. In this example project, the chip is driven using a [74HC595 8-bit Shift Register](https://www.digikey.com/en/products/detail/texas-instruments/SN74HC595N/2772466) and four [2N3904 NPN transistors](https://www.digikey.com/en/products/detail/rochester-electronics-llc/2N3904/11554806).
+The library is designed for flexibility with respect to intermediate stages of circuitry driving the chip. In this example project, the chip is driven using a [74HC595 8-bit Shift Register](https://www.digikey.com/en/products/detail/texas-instruments/SN74HC595N/277246) and four [2N3904 NPN transistors](https://www.digikey.com/en/products/detail/rochester-electronics-llc/2N3904/11554806).
 
 ## Code
 
@@ -27,7 +27,7 @@ for (uint16_t i = 0; i < 0xFFFF; i++) {
 
 Printing of character strings extends to printing the symbol '-', and also use of '.' to illuminate built-in decimal point for each digit of the display.
 
-Initilization of the class requires an array of three user-defined functions which define IO setup, IO pin arrangement relative to each segment of each digit, and IO selection of each digit.  Specific details regarding these function formats are included in *micro7seg.h*.
+Initilization of the class requires an array of pointers to three user-defined functions which define IO setup, IO pin arrangement relative to each segment of each digit, and IO selection of each digit. Specific details regarding these function formats are included in *micro7seg.h*.
 
 ```cpp
 void (*micro7SegIOBind[3])(uint8_t) = {
@@ -37,7 +37,7 @@ void (*micro7SegIOBind[3])(uint8_t) = {
 };
 ```
 
-This way, the class is abstracted from any custom circuitry desired for driving the chip, and is not limited to the circuit schematic used in this example.
+This way, the class is abstracted from any custom circuitry intended for driving the chip, and is not limited to the circuit schematic used in this example. 
 
 ## Schematic
 
