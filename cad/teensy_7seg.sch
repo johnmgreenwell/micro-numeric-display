@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L teensy:Teensy3.1 U1
-U 1 1 5FD2FC87
-P 3550 4000
-F 0 "U1" H 4350 5550 60  0000 C CNN
-F 1 "Teensy3.1" H 4450 2450 60  0000 C CNN
-F 2 "" H 3550 3250 60  0000 C CNN
-F 3 "" H 3550 3250 60  0000 C CNN
-	1    3550 4000
-	1    0    0    -1  
-$EndComp
-$Comp
 L 74xx:74HC595 U2
 U 1 1 5FD31567
 P 6050 4100
@@ -58,17 +47,6 @@ F 2 "" V 6680 3700 50  0001 C CNN
 F 3 "~" H 6750 3700 50  0001 C CNN
 	1    6750 3700
 	0    1    1    0   
-$EndComp
-$Comp
-L custom:7-Seg_Bubble U3
-U 1 1 5FD36AC2
-P 7450 4100
-F 0 "U3" H 7700 4750 50  0000 C CNN
-F 1 "7-Seg_Bubble" H 7800 3450 50  0000 C CNN
-F 2 "" H 7450 4100 50  0001 C CNN
-F 3 "" H 7450 4100 50  0001 C CNN
-	1    7450 4100
-	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R2
@@ -502,4 +480,26 @@ Wire Wire Line
 	7000 5350 7250 5350
 Wire Wire Line
 	7250 5350 7250 5450
+$Comp
+L teensy:Teensy3.1 U?
+U 1 1 61801CA4
+P 3550 4000
+F 0 "U?" H 3550 5637 60  0000 C CNN
+F 1 "Teensy3.1" H 3550 5531 60  0000 C CNN
+F 2 "" H 3550 3250 60  0000 C CNN
+F 3 "" H 3550 3250 60  0000 C CNN
+	1    3550 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L custom:7-Seg_Bubble-custom U?
+U 1 1 61806A7B
+P 7450 4050
+F 0 "U?" H 7450 4767 50  0000 C CNN
+F 1 "7-Seg_Bubble-custom" H 7450 4676 50  0000 C CNN
+F 2 "" H 7450 4175 50  0001 C CNN
+F 3 "" H 7450 4175 50  0001 C CNN
+	1    7450 4050
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

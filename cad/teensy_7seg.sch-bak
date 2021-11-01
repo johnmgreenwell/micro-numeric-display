@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L teensy:Teensy3.1 U1
-U 1 1 5FD2FC87
-P 3550 4000
-F 0 "U1" H 4350 5550 60  0000 C CNN
-F 1 "Teensy3.1" H 4450 2450 60  0000 C CNN
-F 2 "" H 3550 3250 60  0000 C CNN
-F 3 "" H 3550 3250 60  0000 C CNN
-	1    3550 4000
-	1    0    0    -1  
-$EndComp
-$Comp
 L 74xx:74HC595 U2
 U 1 1 5FD31567
 P 6050 4100
@@ -58,17 +47,6 @@ F 2 "" V 6680 3700 50  0001 C CNN
 F 3 "~" H 6750 3700 50  0001 C CNN
 	1    6750 3700
 	0    1    1    0   
-$EndComp
-$Comp
-L custom:7-Seg_Bubble U3
-U 1 1 5FD36AC2
-P 7450 4100
-F 0 "U3" H 7700 4750 50  0000 C CNN
-F 1 "7-Seg_Bubble" H 7800 3450 50  0000 C CNN
-F 2 "" H 7450 4100 50  0001 C CNN
-F 3 "" H 7450 4100 50  0001 C CNN
-	1    7450 4100
-	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R2
@@ -466,6 +444,62 @@ F 1 "Q_NPN_EBC" H 9550 4350 50  0000 L CNN
 F 2 "" H 9600 4700 50  0001 C CNN
 F 3 "~" H 9400 4600 50  0001 C CNN
 	1    9400 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 3550 2200 3550
+Text Label 2200 3550 0    50   ~ 0
+LED
+$Comp
+L Device:LED D?
+U 1 1 5FDA8AAC
+P 6850 5350
+F 0 "D?" H 6843 5095 50  0000 C CNN
+F 1 "LED" H 6843 5186 50  0000 C CNN
+F 2 "" H 6850 5350 50  0001 C CNN
+F 3 "~" H 6850 5350 50  0001 C CNN
+	1    6850 5350
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FDA9645
+P 7250 5450
+F 0 "#PWR?" H 7250 5200 50  0001 C CNN
+F 1 "GND" H 7255 5277 50  0000 C CNN
+F 2 "" H 7250 5450 50  0001 C CNN
+F 3 "" H 7250 5450 50  0001 C CNN
+	1    7250 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 5350 6450 5350
+Text Label 6450 5350 0    50   ~ 0
+LED
+Wire Wire Line
+	7000 5350 7250 5350
+Wire Wire Line
+	7250 5350 7250 5450
+$Comp
+L teensy:Teensy3.1 U?
+U 1 1 61801CA4
+P 3550 4000
+F 0 "U?" H 3550 5637 60  0000 C CNN
+F 1 "Teensy3.1" H 3550 5531 60  0000 C CNN
+F 2 "" H 3550 3250 60  0000 C CNN
+F 3 "" H 3550 3250 60  0000 C CNN
+	1    3550 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L custom:7-Seg_Bubble-custom U?
+U 1 1 61806A7B
+P 7450 4050
+F 0 "U?" H 7450 4767 50  0000 C CNN
+F 1 "7-Seg_Bubble-custom" H 7450 4676 50  0000 C CNN
+F 2 "" H 7450 4175 50  0001 C CNN
+F 3 "" H 7450 4175 50  0001 C CNN
+	1    7450 4050
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
