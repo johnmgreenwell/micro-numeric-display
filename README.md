@@ -4,6 +4,8 @@ Print data to 7-segment micro-numeric indicator chip with Teensy microcontroller
 
 ## Overview
 
+__NOTE__: The driver in this test project is out of date. For the upgraded, HAL-mediated version of this micro numeric display driver, reference the dedicated repository [micro7seg](https://github.com/johnmgreenwell/micro7seg).
+
 The included custom library [*micro7seg.h*](src/src/micro7seg.h) provides Arduino framework support for controlling [QDSP-6064](https://www.sparkfun.com/products/retired/12710) micro-numeric indicator chips.
 
 ![Example Runtime](images/micro_numeric_display_runtime.gif)
