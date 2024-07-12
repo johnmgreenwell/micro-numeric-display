@@ -6,15 +6,15 @@ Print data to 7-segment micro-numeric indicator chip with Teensy microcontroller
 
 __NOTE__: The driver in this test project is out of date. For the upgraded, HAL-mediated version of this micro numeric display driver, reference the dedicated repository [micro7seg](https://github.com/johnmgreenwell/micro7seg).
 
-The included custom library [*micro7seg.h*](src/src/micro7seg.h) provides Arduino framework support for controlling [QDSP-6064](https://www.sparkfun.com/products/retired/12710) micro-numeric indicator chips.
+The included custom driver [*micro7seg.h*](src/src/micro7seg.h) provides Arduino framework support for controlling [QDSP-6064](https://www.sparkfun.com/products/retired/12710) micro-numeric indicator chips.
 
 ![Example Runtime](images/micro_numeric_display_runtime.gif)
 
-The library is designed for flexibility with respect to intermediate stages of circuitry driving the chip. In this example project, the chip is driven using a [74HC595 8-bit Shift Register](https://www.digikey.com/en/products/detail/texas-instruments/SN74HC595N/277246) and four [2N3904 NPN transistors](https://www.digikey.com/en/products/detail/rochester-electronics-llc/2N3904/11554806).
+The driver is designed for flexibility with respect to intermediate stages of circuitry driving the chip. In this example project, the chip is driven using a [74HC595 8-bit Shift Register](https://www.digikey.com/en/products/detail/texas-instruments/SN74HC595N/277246) and four [2N3904 NPN transistors](https://www.digikey.com/en/products/detail/rochester-electronics-llc/2N3904/11554806).
 
 ## Usage
 
-With this library, the micro-numeric indicator chip is accessed using the *print( )* method. The operation shown above is the result of example code:
+With this driver, the micro-numeric indicator chip is accessed using the *print( )* method. The operation shown above is the result of example code:
 
 ```cpp
 display.print("dead");
